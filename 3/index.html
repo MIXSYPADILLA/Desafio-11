@@ -1,19 +1,15 @@
-<!--
-  Sin modificar el HTML debes escribir los selectores que se necesitan para cada elemento pedido.
-
-  Seleccionar el H1 y cambiar el color de texto a rojo
-  Seleccionar la sección 1 (section-1) y agregar el color de fondo amarillo
-  Seleccionar el elemento con clase counter e incrementar en 10 su valor
-  Al hacerle click al elemento con id row-3 se debe agregar el color de fondo gris y además debe tener una transición de 1 segundo
-  Seleccionar el h1 dentro de la sección y duplicar su font-size
-  Seleccionar el último row dentro de la tabla (sin utilizar el id, puesto que el número de elementos podría cambiar) y agregar color de fondo rojo
--->
-
 <!DOCTYPE html>
-<html lang="es" dir="ltr">
+<html lang="es">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>ejercicio 3</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+</script>
+  <style media="screen">
+    #row-3{
+      transition: 1s;
+    }
+  </style>
   </head>
   <body>
     <h1> Hey !! </h1>
@@ -62,5 +58,17 @@
 
       </fieldset>
     </form>
+    <script>
+      $("h1").css("color", "red");
+      $(".section-1").css("background-color", "yellow");
+      $(".counter").text(parseInt(101)+10);
+      $("row-3").on("click", function(){
+      $("#row-3").css("background-color", "gray")
+    })
+      $(".section-1 h1").css("font-size", "2rem")
+      $("#row-4").css("background-color", "red");
+
+    </script>
+
   </body>
 </html>
